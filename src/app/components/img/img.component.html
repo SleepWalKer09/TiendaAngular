@@ -1,0 +1,9 @@
+<!-- <p>img works!</p>
+<h1>{{img}}</h1>
+<hr/> -->
+
+<img (load)="imgLoaded()" (error)="imageError()" [src]="img" *ngIf=" img; else elseImg">
+
+<ng-template #elseImg>
+    <img src="./assets/glasses.jpg" alt="">
+</ng-template>
